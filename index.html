@@ -1,94 +1,125 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jade | Profile</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header class="header">
-    <nav class="nav">
-      <a href="#" class="nav-logo">Jade</a>
-      <ul class="nav-links">
-        <li><a href="#about">소개</a></li>
-        <li><a href="#skills">스킬</a></li>
-        <li><a href="#projects">프로젝트</a></li>
-        <li><a href="#contact">연락처</a></li>
-      </ul>
-    </nav>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jade | Profile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <a href="#" class="nav-logo">Jade</a>
+        <ul class="nav-links">
+          <li><a href="#about">소개</a></li>
+          <li><a href="#skills">스킬</a></li>
+          <li><a href="#projects">프로젝트</a></li>
+          <li><a href="#contact">연락처</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <main>
-    <section class="hero">
-      <div class="hero-content">
-        <div class="profile-image-wrapper">
-          <img src="assets/images/profile_image.png" alt="Profile" class="profile-image">
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+          <div class="profile-image-wrapper">
+            <img
+              src="assets/images/profile_image.png"
+              alt="Profile"
+              class="profile-image"
+            />
+          </div>
+          <h1 class="hero-title">
+            안녕하세요, <span class="highlight">Jade</span>입니다
+          </h1>
+          <p class="hero-subtitle">개인 웹페이지에 오신 것을 환영합니다</p>
         </div>
-        <h1 class="hero-title">안녕하세요, <span class="highlight">Jade</span>입니다</h1>
-        <p class="hero-subtitle">개인 웹페이지에 오신 것을 환영합니다</p>
-      </div>
-    </section>
+      </section>
 
-    <section id="about" class="section">
-      <h2 class="section-title">소개</h2>
-      <p class="section-text">
-        여기에 자기소개를 작성해 주세요. 배경, 관심사, 목표 등을 자유롭게 적어보세요.
-      </p>
-    </section>
+      <section id="about" class="section">
+        <h2 class="section-title">소개</h2>
+        <p class="section-text">안녕하세요. 코딩하는 남자, 백종민입니다.</p>
+      </section>
 
-    <section id="skills" class="section">
-      <h2 class="section-title">스킬</h2>
-      <ul class="skills-list">
-        <li>HTML / CSS / JavaScript</li>
-        <li>React</li>
-        <li>Git / GitHub</li>
-      </ul>
-    </section>
+      <section id="skills" class="section">
+        <h2 class="section-title">스킬</h2>
+        <ul class="skills-list">
+          <li>HTML / CSS / JavaScript</li>
+          <li>React</li>
+          <li>Git / GitHub</li>
+        </ul>
+      </section>
 
-    <section id="projects" class="section">
-      <h2 class="section-title">프로젝트</h2>
-      <div class="projects-grid">
-        <article class="project-card">
-          <h3>프로젝트 1</h3>
-          <p>프로젝트 설명을 여기에 작성하세요.</p>
-        </article>
-        <article class="project-card">
-          <h3>프로젝트 2</h3>
-          <p>프로젝트 설명을 여기에 작성하세요.</p>
-        </article>
-      </div>
-    </section>
+      <section id="projects" class="section">
+        <h2 class="section-title">프로젝트</h2>
+        <div class="projects-grid">
+          <article class="project-card">
+            <h3>프로젝트 1</h3>
+            <p>프로젝트 설명을 여기에 작성하세요.</p>
+          </article>
+          <article class="project-card">
+            <h3>프로젝트 2</h3>
+            <p>프로젝트 설명을 여기에 작성하세요.</p>
+          </article>
+        </div>
+      </section>
 
-    <section id="contact" class="section">
-      <h2 class="section-title">연락처</h2>
-      <div class="contact-links">
-        <button type="button" class="contact-link contact-link-btn" id="email-btn">Email</button>
-        <a href="https://github.com/jongminbaek99" class="contact-link" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://linkedin.com/in/placeholder" class="contact-link" target="_blank" rel="noopener">LinkedIn</a>
-      </div>
-    </section>
-  </main>
+      <section id="contact" class="section">
+        <h2 class="section-title">연락처</h2>
+        <div class="contact-links">
+          <button
+            type="button"
+            class="contact-link contact-link-btn"
+            id="email-btn"
+          >
+            Email
+          </button>
+          <a
+            href="https://github.com/jongminbaek99"
+            class="contact-link"
+            target="_blank"
+            rel="noopener"
+            >GitHub</a
+          >
+          <a
+            href="https://linkedin.com/in/placeholder"
+            class="contact-link"
+            target="_blank"
+            rel="noopener"
+            >LinkedIn</a
+          >
+        </div>
+      </section>
+    </main>
 
-  <!-- Email Popup -->
-  <div id="email-popup" class="popup-overlay" aria-hidden="true">
-    <div class="popup">
-      <button type="button" class="popup-close" aria-label="닫기">&times;</button>
-      <p class="popup-label">이메일 주소</p>
-      <div class="popup-email-row">
-        <span class="popup-email" id="popup-email-text">rootbaeck90@gmail.com</span>
-        <button type="button" class="popup-copy-btn" id="copy-btn">복사하기</button>
+    <!-- Email Popup -->
+    <div id="email-popup" class="popup-overlay" aria-hidden="true">
+      <div class="popup">
+        <button type="button" class="popup-close" aria-label="닫기">
+          &times;
+        </button>
+        <p class="popup-label">이메일 주소</p>
+        <div class="popup-email-row">
+          <span class="popup-email" id="popup-email-text"
+            >rootbaeck90@gmail.com</span
+          >
+          <button type="button" class="popup-copy-btn" id="copy-btn">
+            복사하기
+          </button>
+        </div>
       </div>
     </div>
-  </div>
 
-  <footer class="footer">
-    <p>&copy; 2026 Jade. All rights reserved.</p>
-  </footer>
+    <footer class="footer">
+      <p>&copy; 2026 Jade. All rights reserved.</p>
+    </footer>
 
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
