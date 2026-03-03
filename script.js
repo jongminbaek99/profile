@@ -1,4 +1,57 @@
 document.addEventListener('DOMContentLoaded', function () {
+  // Load content from .txt files
+  const contentBase = 'content';
+  async function loadText(url) {
+    const res = await fetch(url);
+    if (!res.ok) throw new Error(url);
+    return res.text();
+  }
+  async function loadContent() {
+    try {
+      const [heroSub, about, skills, proj1, proj2] = await Promise.all([
+        loadText(contentBase + '/hero-subtitle.txt'),
+        loadText(contentBase + '/about.txt'),
+        loadText(contentBase + '/skills.txt'),
+        loadText(contentBase + '/project1.txt'),
+        loadText(contentBase + '/project2.txt'),
+      ]);
+      const heroEl = document.getElementById('hero-subtitle');
+      const aboutEl = document.getElementById('about-text');
+      const skillsList = document.getElementById('skills-list');
+      const project1 = document.getElementById('project1');
+      const project2 = document.getElementById('project2');
+      if (heroEl) heroEl.textContent = heroSub.trim();
+      if (aboutEl) aboutEl.textContent = about.trim();
+      if (skillsList) {
+        const items = skills.trim().split('\n').filter(Boolean);
+        skillsList.innerHTML = items.map(function (s) {
+          return '<li>' + s.trim().replace(/</g, '&lt;').replace(/>/g, '&gt;') + '</li>';
+        }).join('');
+      }
+      if (project1) {
+        const lines = proj1.trim().split('\n');
+        const title = lines[0] || '';
+        const desc = lines.slice(1).join('\n').trim();
+        const h3 = project1.querySelector('h3');
+        const p = project1.querySelector('p');
+        if (h3) h3.textContent = title;
+        if (p) p.textContent = desc;
+      }
+      if (project2) {
+        const lines = proj2.trim().split('\n');
+        const title = lines[0] || '';
+        const desc = lines.slice(1).join('\n').trim();
+        const h3 = project2.querySelector('h3');
+        const p = project2.querySelector('p');
+        if (h3) h3.textContent = title;
+        if (p) p.textContent = desc;
+      }
+    } catch (err) {
+      console.warn('Content load failed:', err.message);
+    }
+  }
+  loadContent();
+
   // Smooth scroll for nav links (backup for browsers without scroll-behavior support)
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
