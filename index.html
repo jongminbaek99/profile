@@ -66,12 +66,24 @@
     <section id="contact" class="section">
       <h2 class="section-title">연락처</h2>
       <div class="contact-links">
-        <a href="mailto:your@email.com" class="contact-link">Email</a>
-        <a href="https://github.com/yourusername" class="contact-link" target="_blank" rel="noopener">GitHub</a>
-        <a href="#" class="contact-link">LinkedIn</a>
+        <button type="button" class="contact-link contact-link-btn" data-email>Email</button>
+        <a href="https://github.com/jongminbaek99" class="contact-link" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://linkedin.com/in/placeholder" class="contact-link" target="_blank" rel="noopener">LinkedIn</a>
       </div>
     </section>
   </main>
+
+  <!-- Email Popup -->
+  <div id="email-popup" class="popup-overlay" aria-hidden="true">
+    <div class="popup">
+      <button type="button" class="popup-close" aria-label="닫기">&times;</button>
+      <p class="popup-label">이메일 주소</p>
+      <div class="popup-email-row">
+        <span class="popup-email" id="popup-email-text">rootbaeck90@gmail.com</span>
+        <button type="button" class="popup-copy-btn" id="copy-btn">복사하기</button>
+      </div>
+    </div>
+  </div>
 
   <footer class="footer">
     <p>&copy; 2026 Jade. All rights reserved.</p>

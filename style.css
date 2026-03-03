@@ -223,17 +223,108 @@ ul {
   gap: 1rem;
 }
 
-.contact-link {
+.contact-link,
+.contact-link-btn {
   padding: 0.6rem 1.2rem;
   background: var(--color-accent);
   color: var(--color-surface) !important;
   border-radius: var(--radius);
   font-weight: 500;
   font-size: 0.95rem;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
 }
 
-.contact-link:hover {
+.contact-link:hover,
+.contact-link-btn:hover {
   background: var(--color-accent-dark);
+}
+
+/* ===== Email Popup ===== */
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(45, 42, 38, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition), visibility var(--transition);
+}
+
+.popup-overlay.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup {
+  background: var(--color-surface);
+  padding: 1.5rem 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  position: relative;
+  min-width: 320px;
+  max-width: 90vw;
+}
+
+.popup-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  line-height: 1;
+  padding: 0.25rem;
+}
+
+.popup-close:hover {
+  color: var(--color-text);
+}
+
+.popup-label {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.popup-email-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.popup-email {
+  font-size: 1rem;
+  color: var(--color-text);
+  word-break: break-all;
+}
+
+.popup-copy-btn {
+  flex-shrink: 0;
+  padding: 0.5rem 1rem;
+  background: var(--color-accent);
+  color: var(--color-surface);
+  border: none;
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background var(--transition);
+}
+
+.popup-copy-btn:hover {
+  background: var(--color-accent-dark);
+}
+
+.popup-copy-btn.copied {
+  background: #5a9a5a;
 }
 
 /* ===== Footer ===== */
